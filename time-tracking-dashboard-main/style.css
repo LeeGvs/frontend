@@ -1,68 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   overflow: hidden;
   font-family: 'Rubik', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
   background-color: hsl(226, 43%, 10%);
   color: #fff;
 }
 
 .container {
-  max-width: 1000px;
-  max-height: 800px;
+  max-width: 1100px;
+  max-height: 530px;
   margin: 100px auto;
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(4, minmax(50px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(4, 250px);
+  gap: 30px;
+}
+
+.profile {
+  grid-row: 1/3;
+}
+.profile__card {
+  background-color: hsl(246, 80%, 60%);
+  padding: 30px;
+  border-radius: 20px;
+  height: 360px;
+}
+.profile__img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+.profile__text {
+  color: hsl(236, 100%, 87%);
+  font-size: 15px;
+  font-weight: 300;
+  margin-top: 35px;
+  margin-bottom: 0;
+}
+.profile__name {
+  margin-top: 0;
+  font-size: 42px;
+  font-weight: 300;
+}
+.profile__date-selector {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 20px;
+  height: 220px;
+  position: relative;
+  top: -50px;
+  z-index: -1;
+  padding-top: 70px;
+}
+.profile__date-choice {
+  margin: 0;
+  padding: 10px 30px;
+  font-size: 18px;
+  color: hsl(235, 45%, 61%);
+}
+.profile__date-choice--selected {
+  color: #fff;
 }
 
 .card {
+  height: 200px;
   border-radius: 20px;
-}
-.card img {
-}
-.profile {
-  background-color: hsl(246, 80%, 60%);
-  /* height: 300px; */
-  grid-row: 1/3;
-}
-.profile img {
-  width: 150px;
-  height: 150px;
+  max-width: 250px;
+  background-repeat: no-repeat;
+  background-position: right 8px top -10px;
 }
 .card__panel {
   border-radius: 20px;
   background-color: hsl(235, 46%, 20%);
-  padding: 15px;
+  height: 100%;
+  padding: 15px 30px;
+  position: relative;
+  top: 50px;
+}
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 400;
+}
+.card__action {
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin: 12px 0;
+}
+.card__title {
+  font-size: 18px;
+  font-weight: 400;
+}
+.card__current {
+  font-size: 55px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.card__previous {
+  color: hsl(236, 100%, 87%);
+  font-size: 15px;
+  margin-top: 10px;
 }
 .card--work {
   background-color: hsl(15, 100%, 70%);
+  background-image: url('./images/icon-work.svg');
 }
 .card--play {
   background-color: hsl(195, 74%, 62%);
+  background-image: url('./images/icon-play.svg');
 }
 .card--study {
   background-color: hsl(348, 100%, 68%);
+  background-image: url('./images/icon-study.svg');
 }
 .card--exercise {
   background-color: hsl(145, 58%, 55%);
+  background-image: url('./images/icon-exercise.svg');
 }
 .card--social {
   background-color: hsl(264, 64%, 52%);
+  background-image: url('./images/icon-social.svg');
 }
 .card--self-care {
   background-color: hsl(43, 84%, 65%);
+  background-image: url('./images/icon-self-care.svg');
 }
 
-/* @media (max_width: 500px) {
-  max_width: 375px;
-} */
+@media (max_width: 375px) {
+  .container {
+    max-width: fit-content;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
-.attribution a {
+.attribution__a {
   color: hsl(228, 45%, 44%);
 }
