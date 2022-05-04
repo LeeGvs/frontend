@@ -1,7 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+.advice {
+  max-width: 650px;
+  min-height: 400px;
+  margin: 200px auto;
+  background-color: hsl(217, 19%, 24%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+}
+.advice__id {
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: hsl(150, 100%, 66%);
+}
+.advice__text {
+  color: hsl(193, 38%, 86%);
+  font-size: 30px;
+}
+.advice__dice {
+  position: relative;
+  bottom: -20px;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  margin: 0;
+  background-color: hsl(218, 23%, 16%);
+  font-family: 'Manrope', sans-serif;
 }
