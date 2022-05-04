@@ -40,6 +40,7 @@
 
 .advice__dice {
   display: block;
+  border: none;
   position: relative;
   min-height: 80px;
   min-width: 80px;
@@ -51,6 +52,12 @@
   background-size: 40%;
   border-radius: 50%;
   cursor: pointer;
+}
+
+@media (hover: hover) {
+  .advice__dice:hover {
+    box-shadow: hsl(150, 100%, 66%) 0px 0px 50px 10px;
+  }
 }
 
 .attribution {
