@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 .advice {
-  max-width: 650px;
-  min-height: 400px;
+  width: 650px;
+  height: 400px;
   margin: 200px auto;
   background-color: hsl(217, 19%, 24%);
   border-radius: 20px;
@@ -23,14 +23,39 @@
 }
 .advice__text {
   color: hsl(193, 38%, 86%);
-  font-size: 30px;
+  padding-top: 20px;
+  min-height: 220px;
+  font-size: 32px;
+  text-align: center;
+  vertical-align: middle;
 }
+.advice__divider {
+  min-height: 20px;
+  width: 100%;
+  background-image: url('./images/pattern-divider-desktop.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 600px;
+}
+
 .advice__dice {
+  display: block;
   position: relative;
-  bottom: -20px;
+  min-height: 80px;
+  min-width: 80px;
+  bottom: -40px;
+  background-color: hsl(150, 100%, 66%);
+  background-image: url('./images/icon-dice.svg');
+  background-repeat: no-repeat;
+  background-position: left 50% top 50%;
+  background-size: 40%;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .attribution {
+  position: fixed;
+  bottom: 0;
   font-size: 11px;
   text-align: center;
 }
@@ -42,4 +67,20 @@ body {
   margin: 0;
   background-color: hsl(218, 23%, 16%);
   font-family: 'Manrope', sans-serif;
+}
+
+@media screen and (max-width: 600px) {
+  .advice {
+    width: auto;
+    margin: 100px 20px;
+    margin-bottom: 0;
+    padding: 50px 30px;
+  }
+  .advice__text {
+    font-size: 28px;
+  }
+  .advice__divider {
+    background-image: url('./images/pattern-divider-mobile.svg');
+    background-size: 400px;
+  }
 }

@@ -18,4 +18,4 @@ function roll(id = null) {
 }
 
 dice.onclick = (e) => roll();
-roll('117');
+//roll('117');
