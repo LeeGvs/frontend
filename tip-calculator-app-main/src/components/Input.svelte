@@ -17,20 +17,22 @@
     justify-items: right;
     border: 1px solid hsl(184, 14%, 56%);
     height: 50px;
+    padding: 10px;
   }
   .icon {
     height: auto;
     width: auto;
+    position: absolute;
   }
   .inp {
     flex-grow: 2;
     text-align: right;
     border: none;
     font-size: 24px;
-  }
-  .input-group:focus {
-    border: red 5px solid;
     outline: none;
+  }
+  .inp:focus {
+    border: red 5px solid;
   }
   h4 {
     margin-bottom: 0;
