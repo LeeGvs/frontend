@@ -3,13 +3,29 @@
   import PercentageSelect from './PercentageSelect.svelte';
   import { tip_store } from '../store.js';
 
-  let bill, people, tip_percentage;
+  let message = null;
+
+  const checkInput = (e) => {
+    if ($tip_store.people == 0) {
+      message = `can't be zero`;
+    } else {
+      message = null;
+    }
+    console.log(message);
+  };
 </script>
 
 <div class="control">
   <Input title="Bill" icon="./images/icon-dollar.svg" bind:value={$tip_store.bill} />
   <PercentageSelect />
-  <Input title="Number of People" icon="./images/icon-person.svg" bind:value={$tip_store.people} />
+  <Input
+    title="Number of People"
+    icon="./images/icon-person.svg"
+    placeholder="0"
+    bind:value={$tip_store.people}
+    on:input={checkInput}
+    {message}
+  />
 </div>
 
 <style>

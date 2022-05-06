@@ -32,3 +32,6 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
+* {
+  font-family: 'Space Mono', monospace;
+}

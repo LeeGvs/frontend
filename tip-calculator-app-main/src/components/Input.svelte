@@ -2,39 +2,54 @@
   export let title;
   export let icon;
   export let value;
+  export let message = null;
 </script>
 
-<h4>{title}</h4>
 <div class="input-group">
-  <img class="icon" src={icon} alt="icon" />
-  <input class="inp" bind:value type="text" />
+  <div class="title">
+    <h4>{title}</h4>
+    {#if message}<p class="msg-text">{message}</p>{/if}
+  </div>
+  <input type="text" class="inp{message ? ' msg' : ''}" bind:value on:input style="background-image: url({icon})" />
 </div>
 
 <style>
-  .input-group {
+  .title {
     display: flex;
-    align-items: center;
-    justify-items: right;
-    border: 1px solid hsl(184, 14%, 56%);
-    height: 50px;
-    padding: 10px;
-  }
-  .icon {
-    height: auto;
-    width: auto;
-    position: absolute;
+    align-items: baseline;
+    justify-content: space-between;
   }
   .inp {
-    flex-grow: 2;
+    width: 100%;
     text-align: right;
     border: none;
     font-size: 24px;
     outline: none;
+    height: 50px;
+    padding: 10px;
+    /* color: hsl(184, 14%, 56%); */
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    background-position: 20px 50%;
+    background-repeat: no-repeat;
+    border-radius: 5px;
   }
+  .inp:active,
   .inp:focus {
-    border: red 5px solid;
+    border: hsl(172, 67%, 45%) 2px solid;
+  }
+  .msg,
+  .msg:focus {
+    color: rgb(255, 136, 0);
+    border: rgb(255, 136, 0) 2px solid;
+  }
+  .msg-text {
+    color: rgb(255, 136, 0);
+    margin: 0;
+    padding: 0;
   }
   h4 {
     margin-bottom: 0;
+    color: hsl(184, 14%, 56%);
   }
 </style>
