@@ -9,15 +9,20 @@
   const changed = (e) => console.log(($tip_store.tip_percentage = e.target.value));
 </script>
 
-<h4>Select Tip %</h4>
-<div class="pc-buttons">
-  {#each options as amount}
-    <PercentageButton on:change={changed} {amount} group_name="percent" />
-  {/each}
-  <CustomPercentage on:change={changed} bind:value={custom_amount} group_name="percent" />
+<div class="tip-select">
+  <h4>Select Tip %</h4>
+  <div class="pc-buttons">
+    {#each options as amount}
+      <PercentageButton on:change={changed} {amount} group_name="percent" />
+    {/each}
+    <CustomPercentage on:change={changed} bind:value={custom_amount} group_name="percent" />
+  </div>
 </div>
 
 <style>
+  .tip-select > h4 {
+    margin-bottom: 10px;
+  }
   .pc-buttons {
     display: grid;
     grid-template-rows: repeat(2, 1fr);
