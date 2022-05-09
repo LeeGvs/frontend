@@ -3,8 +3,7 @@
 </script>
 
 <main class="container">
-  <h1>SPLI<br />TTER</h1>
-
+  <h1 class="title">SPLI<br />TTER</h1>
   <TipCalc />
 </main>
 <footer>
@@ -15,4 +14,10 @@
 </footer>
 
 <style>
+  .title {
+    font-size: 24px;
+    letter-spacing: 10px;
+    margin-bottom: 80px;
+    color: hsl(183, 100%, 15%);
+  }
 </style>

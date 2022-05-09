@@ -10,13 +10,14 @@
       message = `can't be zero`;
     } else {
       message = null;
+      $tip_store.reset_disabled = false;
     }
     console.log(message);
   };
 </script>
 
 <div class="control">
-  <Input title="Bill" icon="./images/icon-dollar.svg" bind:value={$tip_store.bill} />
+  <Input title="Bill" icon="./images/icon-dollar.svg" on:input={checkInput} bind:value={$tip_store.bill} />
   <PercentageSelect />
   <Input
     title="Number of People"

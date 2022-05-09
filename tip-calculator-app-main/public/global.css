@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
 }
+
 html,
 body {
   position: relative;
@@ -19,7 +23,7 @@ body {
 
 .container {
   width: 920px;
-  margin: 200px auto;
+  margin: 144px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,7 +35,4 @@ body {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
-* {
-  font-family: 'Space Mono', monospace;
 }

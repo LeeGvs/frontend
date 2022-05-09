@@ -12,7 +12,7 @@
     ).toFixed(2);
 
   const reset = () => {
-    tip_store.set({ bill: 0, people: 0, tip_percentage: 0 });
+    tip_store.set({ bill: 0, people: 0, tip_percentage: null, reset_disabled: true });
   };
 </script>
 
@@ -33,7 +33,7 @@
       <span class="amount">{total_per_person}</span><br />
     </div>
   </div>
-  <button class="reset" on:click={reset}>RESET</button>
+  <button class="reset" on:click={reset} disabled={$tip_store.reset_disabled}>RESET</button>
 </div>
 
 <style>
@@ -73,6 +73,9 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .reset:disabled {
+    opacity: 0.25;
   }
   .reset:active {
     background-color: hsl(185, 41%, 84%);
