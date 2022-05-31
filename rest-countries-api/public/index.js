@@ -25,7 +25,7 @@ function home() {
     flag.setAttribute('src', data[i].flags.png);
     flag.setAttribute('class', 'flag');
 
-    const nm = document.createElement('h4');
+    const nm = document.createElement('h2');
     nm.textContent = data[i].name.common;
 
     const list = document.createElement('ul');
@@ -33,7 +33,7 @@ function home() {
     const cur = document.createElement('li');
     const reg = document.createElement('li');
 
-    pop.textContent = `Population: ${data[i].population}`;
+    pop.textContent = `Population: ${(+data[i].population).toLocaleString()}`;
     cur.textContent = `Capital: ${data[i].capital[0]}`;
     reg.textContent = `Region: ${data[i].region}`;
 
