@@ -1,0 +1,22 @@
+.container {
+  margin: 50px auto;
+  max-width: 1400px;
+}
+
+.home_panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.country_card {
+  border: 1px solid grey;
+}
+
+.flag {
+  max-height: 100px;
+}
+
+.header {
+  display: flex;
+}
