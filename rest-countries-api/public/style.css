@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .header {
@@ -9,7 +12,7 @@
   justify-content: space-between;
   padding: 20px;
   background-color: #ffffff;
-  box-shadow: 0px 2px 0px 2px #cecece3d;
+  box-shadow: 0px 2px 0px 2px #cecece;
   position: fixed;
   width: 100%;
   height: 80px;
@@ -47,4 +50,8 @@
   width: 260px;
   height: 160px;
   object-fit: cover;
+}
+
+.hidden {
+  display: none;
 }

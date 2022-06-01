@@ -10,6 +10,36 @@ async function get_all() {
   data = j;
 }
 
+function filter_region() {
+  const cards = document.querySelectorAll('.country_card');
+  const input = document.querySelector('#filter');
+  const txt = input.value.toUpperCase();
+
+  for (let card of cards) {
+    const nm = card.querySelector('.region').textContent;
+    if (txt === '-1' || nm.toUpperCase().indexOf(txt) > -1) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  }
+}
+
+function search() {
+  const cards = document.querySelectorAll('.country_card');
+  const input = document.querySelector('#search');
+  const txt = input.value.toUpperCase();
+
+  for (let card of cards) {
+    const nm = card.querySelector('h2.name').textContent;
+    if (nm.toUpperCase().indexOf(txt) > -1) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  }
+}
+
 function home() {
   const home_panel = document.getElementById('home');
 
@@ -26,6 +56,7 @@ function home() {
     flag.setAttribute('class', 'flag');
 
     const nm = document.createElement('h2');
+    nm.setAttribute('class', 'name');
     nm.textContent = data[i].name.common;
 
     const list = document.createElement('ul');
@@ -36,6 +67,7 @@ function home() {
     pop.textContent = `Population: ${(+data[i].population).toLocaleString()}`;
     cur.textContent = `Capital: ${data[i].capital[0]}`;
     reg.textContent = `Region: ${data[i].region}`;
+    reg.setAttribute('class', 'region');
 
     list.appendChild(pop);
     list.appendChild(cur);

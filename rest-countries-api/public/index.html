@@ -15,13 +15,19 @@
     </header>
     <main class="container">
       <div class="search_panel">
-      <div id="search" class="search">
+      <div class="search">
         ICON
-        <input type="text" placeholder="Search for a country..."></input>
+        <input id="search" type="text" placeholder="Search for a country..." onkeyup="search();"></input>
       </div>
-      <div id="filter" class="filter">
-        <select>
-          <option value="A">A</option>
+      <div class="filter">
+        <select id="filter" placeholder="Filter..." onchange="filter_region();">
+          <option value="-1">Select Region:</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Antarctic">Antarctic</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
         </select>
       </div>
     </div>
