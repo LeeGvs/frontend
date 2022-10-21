@@ -14,25 +14,54 @@
       <div class="colour_mode">Dark Mode</div>
     </header>
     <main class="container">
-      <div class="search_panel">
-      <div class="search">
-        ICON
-        <input id="search" type="text" placeholder="Search for a country..." onkeyup="search();"></input>
+      <div id="home" class="home">
+        <div class="search_panel">
+          <input id="search" type="text" class="search" placeholder="Search for a country..." onkeyup="search();" />
+
+          <select id="filter" class="filter" placeholder="Filter..." onchange="filter_region();">
+            <option value="-1">Select Region:</option>
+            <option value="Africa">Africa</option>
+            <option value="Americas">Americas</option>
+            <option value="Antarctic">Antarctic</option>
+            <option value="Asia">Asia</option>
+            <option value="Europe">Europe</option>
+            <option value="Oceania">Oceania</option>
+          </select>
+        </div>
+        <div id="home_panel" class="home_panel"></div>
       </div>
-      <div class="filter">
-        <select id="filter" placeholder="Filter..." onchange="filter_region();">
-          <option value="-1">Select Region:</option>
-          <option value="Africa">Africa</option>
-          <option value="Americas">Americas</option>
-          <option value="Antarctic">Antarctic</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="Oceania">Oceania</option>
-        </select>
+      <div id="detail" class="detail_panel hidden">
+        <button class="detail__btn_back" onclick="detail_back();">Back</button>
+        <div class="detail__main">
+          <div class="detail__flag"></div>
+          <div class="detail__info">
+            <h1 class="detail__name">Belgium</h1>
+            <div class="detail__data">
+              <div class="detail__data-col">
+                <p><strong>Native Name: </strong><span id="det_native"></span></p>
+                <p><strong>Population: </strong><span id="det_population"></span></p>
+                <p><strong>Region: </strong><span id="det_region"></span></p>
+                <p><strong>Sub Region: </strong><span id="det_sub_region"></span></p>
+                <p><strong>Capital: </strong><span id="det_capital"></span></p>
+              </div>
+              <div class="detail__data-col">
+                <p><strong>Top Level Domain: </strong><span id="det_tld"></span></p>
+                <p><strong>Currencies: </strong><span id="det_currency"></span></p>
+                <p><strong>Languages: </strong><span id="det_languages"></span></p>
+              </div>
+            </div>
+
+            <div class="deatil__borders">
+              <strong>Border Countries: </strong>
+              <div id="det_borders">
+                <button class="detail__btn">France</button>
+                <button class="detail__btn">Germany</button>
+                <button class="detail__btn">Netherlands</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-      <div id="home" class="home_panel"></div>
-      <div id="detail" class="deatil_panel"></div>
     </main>
   </body>
 </html>
