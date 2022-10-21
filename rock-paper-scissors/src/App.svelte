@@ -7,7 +7,7 @@
 
 <main class="container">
   <div class="heading">
-    <img src="../images/logo.svg" alt="RPS-logo" />
+    <img src="./images/logo.svg" alt="RPS-logo" />
     <Score />
   </div>
   <!-- Heading -->
@@ -49,8 +49,9 @@
     padding: 1rem 1.5rem;
   }
   @media (min-width: 640px) {
-    main {
-      max-width: none;
+    .container {
+      width: auto;
+      margin: 0;
     }
   }
 </style>
